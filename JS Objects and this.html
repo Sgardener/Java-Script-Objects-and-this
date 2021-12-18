@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<script>
+	let user1 = {
+	  name: "Джон",
+	  age: 30
+	};
+	user1.sayHi = function() {
+	  alert("Привет!");
+	};
+	user1.sayHi(); 
+
+	let user2 = {
+		name: "Сережа ",
+		lastname: "Егоров ",
+		age: "19 ",
+		sex: 'Мужской ',
+		status: 'Студент ',
+	}
+	alert(user2.name + user2.age + user2.status)
+	
+	let users = {
+		name: ['Сережа', 'Кирилл', 'Костя', 'Вася'],
+	}
+	let orders = {
+		numberoforder: [12, 101, 1212, 312]
+	}
+	let restoraunts = {
+		nameofrestoraunt: [1, 2, 3, 4]
+	}
+	alert("В ресторане " + restoraunts.nameofrestoraunt[1] + " готов заказ " + orders.numberoforder[1] + " для заказчика под именем " + users.name[1])
+	
+	function User(name) {
+	  this.name = name;
+	  this.isAdmin = false
+	}
+
+	let user = new User("Сережа");
+
+	alert(user.name); 
+	alert(user.isAdmin); 
+
+	function User(name) {
+	  this.name = name;
+
+	  this.sayHi = function() {
+		alert( "Мое имя: " + this.name );
+	  };
+	}
+
+	let cerezha = new User("Сережа");
+
+	cerezha.sayHi();
+
+</script>
